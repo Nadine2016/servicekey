@@ -8,6 +8,12 @@ resource "ibm_resource_instance" "resource_instance" {
   plan              = "standard"
   resource_group_id = "${data.ibm_resource_group.group.id}"
   location = "us-south"
+  
+  parameters {
+    
+    service-endpoints = "private"
+    
+   }
 }
 
 resource "ibm_resource_key" "resourceKey" {
