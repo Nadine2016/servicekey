@@ -7,6 +7,7 @@ resource "ibm_resource_instance" "resource_instance" {
   service           = "databases-for-etcd"
   plan              = "lite"
   resource_group_id = "${data.ibm_resource_group.group.id}"
+  location = "us-south"
 }
 
 resource "ibm_resource_key" "resourceKey" {
